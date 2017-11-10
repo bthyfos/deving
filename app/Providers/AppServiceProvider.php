@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 
 use App\ProductType;
 
@@ -23,7 +24,9 @@ class AppServiceProvider extends ServiceProvider
 
              \View::share('selectProductTypes',$selectProductTypes);
 
-    }
+            Schema::defaultStringLength(191);
+
+        }
 
 
     }
